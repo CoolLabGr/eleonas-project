@@ -1,0 +1,26 @@
+# language: node_js
+# node_js:
+#   - "6"
+# cache:
+#   directories:
+#   - node_modules
+# notifications:
+#   email: false
+# before_install: 
+#   - cd functions
+# install: 
+#   - npm install
+# script:
+#   - npm run build && npm run deploy
+before_deploy: 
+  - echo "ready?"
+deploy:
+  provider: firebase
+  token:
+    secure: PQJFGFGTXeu5q+KQLJp1tsw6v+ZwInpUS779SgPchAkuo7t8ENtJzPoZnYPgK8yQhiwzpo1XP10Z1gWnppifBal+PyyCMkBg92MfPEbejZ4jVf3mcKv8eJ3+ssqEvmIsJ8rbo8utXeIuroDFiJuLeMRIVxG1CFgn9nLPMYcMLRoKTbqbdAGFsnTYV5jAx4nLvjzZFPxJkZ1XmX6qu5L4hFBK8+IvQUBAn1KFphzFUPstJtiuDFnHmKk8r6o+X+OLP5jwCXSjlbgmpMDxSBgSap5XY3uOJkUB8f50q/JCetmnNESt1vaLDmLen9ZDF226kvXrII+8qqUmk57n12SYAhxSiMz1tpeIgK9ldNXTOMnT/80DiMOIUIzFijFuFiArthoe0LS+X2e6RDhpjldgI9hScC1fcMxfBxfFVJsxQ4cDHdoaV/W0UZpKIuQ/yDILmsJftkFCqkpwlm8nF4x4fG9ixM3jBECHGPen68k4CbilwGl7tjqhoQexBs8aS/JFAJvgztzpoicMu34PEm/SzYH0tAzT9MiZnxXIJABdEa/ddM+5p6byCioI7IpmWHckQkn26bW+j/zO2vzCxJqi8mjRCtGhbll6xoq5ryPXCfD3uSy/6wZdV3zzCNQB+wg3+T4RaPZTAm3/zUWh8/FjiW3hoAisncyosRZrg32PQ3w=
+  message: "your message"
+after_deploy:
+  - echo "finish :)"
+# env:
+#   global:
+#     secure: PQJFGFGTXeu5q+KQLJp1tsw6v+ZwInpUS779SgPchAkuo7t8ENtJzPoZnYPgK8yQhiwzpo1XP10Z1gWnppifBal+PyyCMkBg92MfPEbejZ4jVf3mcKv8eJ3+ssqEvmIsJ8rbo8utXeIuroDFiJuLeMRIVxG1CFgn9nLPMYcMLRoKTbqbdAGFsnTYV5jAx4nLvjzZFPxJkZ1XmX6qu5L4hFBK8+IvQUBAn1KFphzFUPstJtiuDFnHmKk8r6o+X+OLP5jwCXSjlbgmpMDxSBgSap5XY3uOJkUB8f50q/JCetmnNESt1vaLDmLen9ZDF226kvXrII+8qqUmk57n12SYAhxSiMz1tpeIgK9ldNXTOMnT/80DiMOIUIzFijFuFiArthoe0LS+X2e6RDhpjldgI9hScC1fcMxfBxfFVJsxQ4cDHdoaV/W0UZpKIuQ/yDILmsJftkFCqkpwlm8nF4x4fG9ixM3jBECHGPen68k4CbilwGl7tjqhoQexBs8aS/JFAJvgztzpoicMu34PEm/SzYH0tAzT9MiZnxXIJABdEa/ddM+5p6byCioI7IpmWHckQkn26bW+j/zO2vzCxJqi8mjRCtGhbll6xoq5ryPXCfD3uSy/6wZdV3zzCNQB+wg3+T4RaPZTAm3/zUWh8/FjiW3hoAisncyosRZrg32PQ3w=
